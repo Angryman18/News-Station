@@ -1,0 +1,22 @@
+div.top {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+div.bottom {
+    position: sticky;
+    top: 4rem;
+}
+
+@media (max-width: 768px) {
+    div.top {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin: 5px;
+    }
+}

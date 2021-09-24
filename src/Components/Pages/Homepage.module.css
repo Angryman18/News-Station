@@ -1,0 +1,62 @@
+.home_main {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin: 0 3rem 2rem 3rem;
+}
+
+.home_left {
+    width: 60%;
+}
+
+.home_left h1 {
+    box-sizing: border-box;
+    padding-left: 10px;
+    transition: all 0.4s ease;
+    font-size: clamp(1.1rem, 5vw, 2rem);
+}
+
+
+.home_left h1:hover {
+    box-sizing: border-box;
+    padding-left: 20px;
+    animation: headingHover 0.4s ease;
+}
+
+
+@keyframes headingHover {
+    from {
+        padding-left: 10px;
+    }
+    to {
+        padding-left: 20px;
+    }
+}
+
+.home_left h1:hover::after {
+    content: " »";
+    animation: apearArrow 0.4s ease;
+}
+
+@keyframes apearArrow {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.home_right {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .home_main {
+        margin: 0;
+    }
+}

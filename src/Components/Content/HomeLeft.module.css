@@ -1,0 +1,12 @@
+.homeleft_main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .homeleft_main {
+        display: flex;
+        flex-direction: column;
+    }
+}

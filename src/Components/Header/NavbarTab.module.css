@@ -1,0 +1,113 @@
+
+nav.mobileNav {
+    display: none;
+}
+
+nav.mobileNav div a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    nav.mobileNav  {
+        display: inline-flex;
+        height: 3.5rem;
+        width: 100vw;
+        background: linear-gradient(to bottom, #4e62cf, #3f51b5);
+        position: sticky;
+        top: 0;
+        box-shadow: 1px 1px 20px 3px rgba(0,0,0,0.5);
+        z-index: 1;
+    }
+
+    nav.mobileNav ul .activeLink {
+        color: #000;
+        background: linear-gradient(to bottom, cyan, rgb(11, 211, 211));
+    }
+
+    nav.mobileNav ul.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 25rem;
+        background: linear-gradient(to right, darkblue, rgb(9, 9, 214));
+        position: absolute;
+        top: 55px;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        animation: displaymenu 0.3s ease;
+    }
+
+    @keyframes displaymenu {
+        from {
+            height: 0;
+        }
+        to {
+            height: 25rem;
+        }
+    }
+
+    nav.mobileNav ul.menu {
+        display: none;
+    }
+
+    @keyframes reversemenu {
+        from {
+            width: 200px;
+        }
+        to {
+            width: 0;
+        }
+    }
+
+    nav.mobileNav ul li {
+        list-style: none;
+        border-radius: 5px;
+        animation: setOverlay 0.3s ease;
+    }
+
+    @keyframes setOverlay {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    nav.mobileNav ul a {
+        text-align: center;
+        height: 100%;
+        text-decoration: none;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    
+    nav.mobileNav ul a:hover {
+        background: linear-gradient(to bottom, cyan, rgb(11, 211, 211));
+        color: black;
+        transition: 0.1s ease;
+    }
+
+    nav.mobileNav .icon {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translate(-5%, -50%);
+        color: #fff;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    nav.mobileNav div:nth-child(1) h3 {
+        color: #fff;
+        padding: auto;
+        margin-left: 15px;
+    }
+
+}
